@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import PopularTour from "../PopularTour/PopularTour";
 
 const banner = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
@@ -119,6 +120,7 @@ const banner = () => {
           />
         ))}
       </div>
+      <PopularTour></PopularTour>
     </>
   );
 };
