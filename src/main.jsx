@@ -9,6 +9,8 @@ import Home from './components/Home/Home.jsx';
 import Register from './components/Register/Register.jsx';
 import Login from './components/Login/Login.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import AddSpot from './components/AddSpot/AddSpot.jsx';
+import UpdateSpot from './components/UpdateSpot/UpdateSpot.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/addSpot",
+        element: <AddSpot></AddSpot>
+      },
+      {
+        path: "/updateSpot",
+        element: <UpdateSpot></UpdateSpot>
       },
     ],
   },
