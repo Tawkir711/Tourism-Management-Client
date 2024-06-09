@@ -1,12 +1,12 @@
 import './App.css'
+import Main from './components/Layout/Main';
 
 function App() {
 
 
   return (
     <>
-      <h1>Tourism Management Client</h1>
-      
+    <Main></Main>      
     </>
   );
 }
