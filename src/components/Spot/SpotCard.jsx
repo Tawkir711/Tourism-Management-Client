@@ -1,7 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const SpotCard = ({ spot }) => {
-  const { image, tourist, country, short, cost,  time, } = spot;
+  const {_id, image, tourist, country, short, cost,  time, } = spot;
   return (
     <div className="max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B]">
       <img
@@ -21,9 +22,11 @@ const SpotCard = ({ spot }) => {
         </div>
       </div>
       <div className="flex justify-center">
-        <button className="rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
-          View Details
-        </button>
+        <NavLink to={`/spotDetails/${_id}`}>
+          <button className="rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
+            View Details
+          </button>
+        </NavLink>
       </div>
     </div>
   );

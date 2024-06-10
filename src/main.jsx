@@ -11,6 +11,7 @@ import Login from './components/Login/Login.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import AddSpot from './components/AddSpot/AddSpot.jsx';
 import UpdateSpot from './components/UpdateSpot/UpdateSpot.jsx';
+import SpotDetails from './components/Spot/SpotDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: "/updateSpot",
         element: <UpdateSpot></UpdateSpot>,
+      },
+      {
+        path: "/spotDetails/:id",
+        element: <SpotDetails></SpotDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`),
       },
     ],
   },
