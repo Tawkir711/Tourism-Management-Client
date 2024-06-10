@@ -16,11 +16,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/spot"),
       },
       {
         path: "/register",
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addSpot",
-        element: <AddSpot></AddSpot>
+        element: <AddSpot></AddSpot>,
       },
       {
         path: "/updateSpot",
-        element: <UpdateSpot></UpdateSpot>
+        element: <UpdateSpot></UpdateSpot>,
       },
     ],
   },

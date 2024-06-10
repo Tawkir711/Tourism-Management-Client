@@ -28,7 +28,7 @@ const PopularTour = () => {
   return (
     <section className="popular-tours pt-16 pb-10">
       <h2 className="text-center pb-6 text-5xl ">Popular Tours</h2>
-      <div className="tours-container flex justify-center gap-12">
+      <div className="tours-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-12 ">
       {popularTours.map((tour, index) => (
         <div className="max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B]">
           <img

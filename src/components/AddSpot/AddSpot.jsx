@@ -37,7 +37,7 @@ const AddSpot = () => {
           Swal.fire({
             icon: "success",
             title: "Success",
-            text: "User Added Successfully",
+            text: "Spots Added Successfully",
           });
         }
     })
