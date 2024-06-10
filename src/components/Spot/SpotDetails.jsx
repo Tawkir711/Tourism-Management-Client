@@ -1,19 +1,49 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { NavLink, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../Context/Context";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const SpotDetails = () => {
+  const { user } = useContext(AuthContext);
   const spot = useLoaderData();
-  const {
+  const { image, tourist, country, short, cost, seasonality, time, visitor,location } = spot;
+
+  const listData = {
     image,
     tourist,
     country,
     short,
+    location,
     cost,
     seasonality,
     time,
-    visitor
-  } = spot;
+    visitor,
+    email: user.email,
+  };
+
+  const handleMyList = () => {
+    axios?.post("http://localhost:5000/myLists", listData)
+      .then((data) => {
+        if (data.data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Done",
+            text: " Add To My List",
+          });
+        }
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: "warning",
+          title: "Oops...",
+          text: "Already Added",
+        });
+      });
+  };
+
+
   return (
     <div className="card lg:w-[600px] mx-auto m-6 bg-base-100 shadow-xl">
       <Helmet>
@@ -27,21 +57,30 @@ const SpotDetails = () => {
         <h2 className="card-title">Country: {country} </h2>
         <p>{short}</p>
         <div className="grid gap-2">
-          <h1 className="text-lg font-semibold ">Spot Name: {tourist}</h1>
           <div className="flex gap-12">
+            <h1 className="text-lg font-semibold ">Spot Name: {tourist}</h1>
+            <h1 className="text-lg font-semibold ">Location: {location}</h1>
+          </div>
+          <div className="flex gap-16">
             <div className="text-lg font-semibold">Travel Time: {time}</div>
             <div className="text-lg font-semibold">Cost: ${cost}</div>
           </div>
           <div className="flex gap-12">
-            <div className="text-lg font-semibold">Year Visitor: {visitor} man</div>
-            <div className="text-lg font-semibold">Seasonality: {seasonality}</div>
+            <div className="text-lg font-semibold">
+              Year Visitor: {visitor} man
+            </div>
+            <div className="text-lg font-semibold">
+              Seasonality: {seasonality}
+            </div>
           </div>
         </div>
         <div className="card-actions gap-10 pt-4">
           <NavLink to={"/"}>
             <button className="btn btn-ghost btn-active">Back Home</button>
           </NavLink>
-          <button className="btn btn-ghost btn-active">My List</button>
+          <button onClick={handleMyList} className="btn btn-ghost btn-active">
+            My List
+          </button>
         </div>
       </div>
     </div>

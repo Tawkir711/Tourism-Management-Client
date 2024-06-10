@@ -16,7 +16,7 @@ const Home = () => {
       <Banner></Banner>
       <h2 className="text-4xl font-semibold text-center mt-8">Tourists Spots Section </h2>
       <div className="pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
-        {spots.map((spot) => (
+        {spots?.map((spot) => (
           <SpotCard key={spot._id} spot={spot}></SpotCard>
         ))}
       </div>
