@@ -52,8 +52,10 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/myLists"),
       },
       {
-        path: "/updateSpot",
+        path: "/updateSpot/:id",
         element: <UpdateSpot></UpdateSpot>,
+        loader: ({params}) =>
+          fetch(`http://localhost:5000/myLists/${params.id}`),
       },
       {
         path: "/spotDetails/:id",

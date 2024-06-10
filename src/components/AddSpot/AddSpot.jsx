@@ -74,6 +74,7 @@ const AddSpot = () => {
                 type="text"
                 name="tourist"
                 placeholder="tourists spot name"
+                required
                 className="input input-bordered w-full"
               />
             </label>
@@ -103,6 +104,7 @@ const AddSpot = () => {
                 type="text"
                 name="location"
                 placeholder="location"
+                required
                 className="input input-bordered w-full"
               />
             </label>
@@ -132,6 +134,7 @@ const AddSpot = () => {
                 type="text"
                 name="cost"
                 placeholder="average cost"
+                required
                 className="input input-bordered w-full"
               />
             </label>
@@ -161,6 +164,7 @@ const AddSpot = () => {
                 type="text"
                 name="time"
                 placeholder="travel time"
+                required
                 className="input input-bordered w-full"
               />
             </label>
@@ -190,6 +194,7 @@ const AddSpot = () => {
                 type="email"
                 name="email"
                 placeholder="user email"
+                required
                 className="input input-bordered w-full"
               />
             </label>
@@ -211,11 +216,10 @@ const AddSpot = () => {
             </label>
           </div>
         </div>
-        
+
         <input type="submit" value="Add Spot" className="btn btn-block" />
       </form>
     </div>
-
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyListDetails = ({ item, setItmData, itmData }) => {
@@ -6,7 +7,7 @@ const MyListDetails = ({ item, setItmData, itmData }) => {
   console.log(item);
   console.log(myData);
 
-  const { _id, image, short, country,cost, seasonality, time, visitor, location, tourist, email } = item;
+  const { _id, image, short, country, tourist,  } = item;
   
   const handleRemove = (id) => {
     console.log("14", id);
@@ -40,14 +41,19 @@ const MyListDetails = ({ item, setItmData, itmData }) => {
         <img src={image} alt="Shoes" className="rounded-xl" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">Country:  {country} </h2>
-        <h2 className="card-title">Tour Spot:  {tourist} </h2>
+        <h2 className="card-title">Country: {country} </h2>
+        <h2 className="card-title">Tour Spot: {tourist} </h2>
         <p> {short} </p>
         <div className="card-actions">
-          <button onClick={() => handleRemove(_id)} className="btn btn-ghost btn-active">
-            Delete 
+          <button
+            onClick={() => handleRemove(_id)}
+            className="btn btn-ghost btn-active"
+          >
+            Delete
           </button>
+          <NavLink to={`/updateSpot/${_id}`}>
             <button className="btn btn-ghost btn-active">Update</button>
+          </NavLink>
         </div>
       </div>
     </div>

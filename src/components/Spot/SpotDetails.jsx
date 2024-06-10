@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 const SpotDetails = () => {
   const { user } = useContext(AuthContext);
   const spot = useLoaderData();
-  const { image, tourist, country, short, cost, seasonality, time, visitor,location } = spot;
+  const { image, tourist, country, short, cost, seasonality, time, visitor,location, name } = spot;
 
   const listData = {
     image,
@@ -20,6 +20,7 @@ const SpotDetails = () => {
     seasonality,
     time,
     visitor,
+    name,
     email: user.email,
   };
 
