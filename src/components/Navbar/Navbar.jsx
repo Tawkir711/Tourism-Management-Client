@@ -45,7 +45,13 @@ const Navbar = () => {
         <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink to={"/addSpot"}>Add Spot</NavLink>
+        <NavLink to={"/g"}>All Tourists Spot</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/addSpot"}>Add Tourists Spot</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/myList"}>My List</NavLink>
       </li>
       <li>
         <NavLink to={"/login"}>Login</NavLink>
