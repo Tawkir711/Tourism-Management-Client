@@ -29,7 +29,7 @@ const MyListDetails = ({ item, setItmData, itmData }) => {
             const remaining = myData?.filter((data) => data._id !== id);
             setItmData(remaining);
             console.log(data);
-            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            Swal.fire("Deleted!", "Your Tour Spot has been deleted.", "success");
           });
       }
     });
