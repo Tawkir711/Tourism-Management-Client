@@ -46,7 +46,7 @@ const SpotDetails = () => {
 
 
   return (
-    <div className="card lg:w-[600px] mx-auto m-6 bg-base-100 shadow-xl">
+    <div className="card lg:w-[600px] mx-auto m-6 bg-base-100 shadow-xl dark:bg-[#18181B] dark:text-white">
       <Helmet>
         <title>Tourism Management / Spot Details</title>
       </Helmet>
@@ -77,9 +77,14 @@ const SpotDetails = () => {
         </div>
         <div className="card-actions gap-10 pt-4">
           <NavLink to={"/"}>
-            <button className="btn btn-ghost btn-active">Back Home</button>
+            <button className="btn rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200btn-ghost btn-active ">
+              Back Home
+            </button>
           </NavLink>
-          <button onClick={handleMyList} className="btn btn-ghost btn-active">
+          <button
+            onClick={handleMyList}
+            className="btn rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200 "
+          >
             My List
           </button>
         </div>

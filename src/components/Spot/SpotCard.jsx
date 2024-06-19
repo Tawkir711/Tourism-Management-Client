@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const SpotCard = ({ spot }) => {
   const {_id, image, tourist, country, short, cost,  time, } = spot;
   return (
-    <div className="max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B]">
+    <div className="max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B] dark:text-white">
       <img
         width={200}
         height={200}

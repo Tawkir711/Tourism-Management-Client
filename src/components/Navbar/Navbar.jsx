@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Context/Context";
 import Swal from "sweetalert2";
+import { ThemeContext } from "../ThemeContext/ThemeContext";
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
         Swal.fire({
@@ -104,6 +106,11 @@ const Navbar = () => {
         </div>
         <div className="flex justify-center items-center gap-3">
           <h2 className="text-xl font-semibold">Tourism Management</h2>
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded bg-blue-500 text-white dark:bg-yellow-500 "
+          >Toggle
+          </button>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">

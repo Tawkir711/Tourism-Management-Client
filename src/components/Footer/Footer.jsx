@@ -11,10 +11,10 @@ const Footer = () => {
         <nav className="text-lg">
           <ul className="space-y-3">
             <NavLink to={"/"}>
-              <li className="cursor-pointer hover:underline">Home</li>
+              <li className="cursor-pointer hover:underline pb-4">Home</li>
             </NavLink>
             <NavLink to={"/allTourSpot"}>
-              <li className="cursor-pointer hover:underline">All Tourist Spot</li>
+              <li className="cursor-pointer hover:underline pb-4">All Tourist Spot</li>
             </NavLink>
             <NavLink to={"/addSpot"}>
               <li className="cursor-pointer hover:underline">Add Tourist Spot</li>

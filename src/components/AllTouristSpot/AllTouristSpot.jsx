@@ -41,11 +41,11 @@ const AllTouristSpot = () => {
           </select>
         </div>
       </div> */}
-      <div className="grid-container">
+      <div className="grid-container ">
         {spots.map((spot) => (
           <div
             key={spot.id}
-            className="card mx-auto m-6 bg-base-100 shadow-xl"
+            className="card mx-auto m-6 bg-base-100 shadow-xl dark:bg-[#18181B] dark:text-white"
           >
             <figure className="card-image">
               <img src={spot.image} alt="Shoes" className="rounded-xl" />
@@ -79,12 +79,12 @@ const AllTouristSpot = () => {
               </div>
               <div className="card-actions gap-10 pt-4">
                 <NavLink to={"/"}>
-                  <button className="btn btn-ghost btn-active">
+                  <button className="btn rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
                     Back Home
                   </button>
                 </NavLink>
                 <NavLink to={`/spotDetails/${spot._id}`}>
-                  <button className="btn btn-ghost btn-active">
+                  <button className="btn rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
                     View Details
                   </button>
                 </NavLink>

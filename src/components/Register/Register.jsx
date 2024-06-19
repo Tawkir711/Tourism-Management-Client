@@ -69,19 +69,19 @@ const Register = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-base-200 my-5">
       <Helmet>
         <title>Tourism Management / Register</title>
       </Helmet>
-      <div className="hero-content flex-col ">
+      <div className="hero-content flex-col dark:bg-[#18181B] dark:text-white">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Register your account !</h1>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 dark:bg-[#18181B] dark:text-white">
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text dark:text-white">Name</span>
               </label>
               <input
                 type="text"
@@ -93,7 +93,7 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Photo URL</span>
+                <span className="label-text dark:text-white">Photo URL</span>
               </label>
               <input
                 type="text"
@@ -105,7 +105,7 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text dark:text-white">Email</span>
               </label>
               <input
                 type="email"
@@ -117,7 +117,7 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text dark:text-white">Password</span>
               </label>
               <input
                 type="password"
@@ -127,7 +127,10 @@ const Register = () => {
                 required
               />
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <a
+                  href="#"
+                  className="label-text dark:text-white-alt link link-hover dark:text-white"
+                >
                   Forgot password?
                 </a>
               </label>

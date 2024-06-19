@@ -26,34 +26,34 @@ const popularTours = [
 
 const PopularTour = () => {
   return (
-    <section className="popular-tours pt-16 pb-10">
+    <section className="popular-tours pt-16 pb-10 ">
       <h2 className="text-center pb-6 text-5xl ">Popular Tours</h2>
       <div className="tours-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-12 ">
-      {popularTours.map((tour, index) => (
-        <div className="max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B]">
-          <img
-            width={200}
-            height={200}
-            className="h-[275px] w-[350px] rounded-lg object-cover"
-            src={tour.image}
-            alt={tour.name}
-          />
-          <div className="grid gap-2">
-            <h3>{tour.name}</h3>
-            <p className="text-sm text-gray-500 dark:text-white/60">
-              {tour.description}
-            </p>
-            <div className="text-lg font-semibold">
-              <p className="tour-price">{tour.price}</p>
+        {popularTours.map((tour, index) => (
+          <div className="max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B] dark:text-white">
+            <img
+              width={200}
+              height={200}
+              className="h-[275px] w-[350px] rounded-lg object-cover"
+              src={tour.image}
+              alt={tour.name}
+            />
+            <div className="grid gap-2">
+              <h3>{tour.name}</h3>
+              <p className="text-sm text-gray-500 dark:text-white/60">
+                {tour.description}
+              </p>
+              <div className="text-lg font-semibold">
+                <p className="tour-price">{tour.price}</p>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <button className="book-now rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
+                Book Now
+              </button>
             </div>
           </div>
-          <div className="flex justify-center">
-            <button className="book-now rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
-              Book Now
-            </button>
-          </div>
-        </div>
-      ))}
+        ))}
       </div>
     </section>
   );

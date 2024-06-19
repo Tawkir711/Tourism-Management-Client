@@ -36,7 +36,7 @@ const MyListDetails = ({ item, setItmData, itmData }) => {
   };
 
   return (
-    <div className="card lg:w-96 bg-base-100 shadow-xl">
+    <div className="card lg:w-96 bg-base-100 shadow-xl dark:bg-[#18181B] dark:text-white">
       <figure className="px-10 pt-10">
         <img src={image} alt="Shoes" className="rounded-xl" />
       </figure>
@@ -47,12 +47,14 @@ const MyListDetails = ({ item, setItmData, itmData }) => {
         <div className="card-actions">
           <button
             onClick={() => handleRemove(_id)}
-            className="btn btn-ghost btn-active"
+            className="btn rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200"
           >
             Delete
           </button>
           <NavLink to={`/updateSpot/${_id}`}>
-            <button className="btn btn-ghost btn-active">Update</button>
+            <button className="btn rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
+              Update
+            </button>
           </NavLink>
         </div>
       </div>

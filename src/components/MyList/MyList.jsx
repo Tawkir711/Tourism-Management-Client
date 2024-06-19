@@ -24,7 +24,7 @@ const MyList = () => {
       <div className="text-center">
         <h3 className="text-2xl font-semibold">My List</h3>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 my-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 my-6 ">
         {itmData?.length > 0 ? (
           itmData.map((item) => (
             <MyListDetails

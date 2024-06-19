@@ -44,7 +44,7 @@ const AddSpot = () => {
     
   };
   return (
-    <div className="bg-[#dddddb] p-4 lg:p-10 my-7">
+    <div className="bg-[#dddddb] p-4 lg:p-10 my-7 dark:bg-[#000] dark:text-white">
       <Helmet>
         <title>Tourism Management / Add Spot</title>
       </Helmet>
@@ -53,7 +53,9 @@ const AddSpot = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Image</span>
+              <span className="label-text dark:text-white">
+                Image
+              </span>
             </label>
             <label className="input-group">
               <input
@@ -67,7 +69,7 @@ const AddSpot = () => {
           </div>
           <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
-              <span className="label-text">Tourists Spot Name</span>
+              <span className="label-text dark:text-white">Tourists Spot Name</span>
             </label>
             <label className="input-group">
               <input
@@ -83,7 +85,7 @@ const AddSpot = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Country Name</span>
+              <span className="label-text dark:text-white">Country Name</span>
             </label>
             <label className="input-group">
               <input
@@ -97,7 +99,7 @@ const AddSpot = () => {
           </div>
           <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
-              <span className="label-text">Location</span>
+              <span className="label-text dark:text-white">Location</span>
             </label>
             <label className="input-group">
               <input
@@ -113,7 +115,7 @@ const AddSpot = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Short Description</span>
+              <span className="label-text dark:text-white">Short Description</span>
             </label>
             <label className="input-group">
               <input
@@ -127,7 +129,7 @@ const AddSpot = () => {
           </div>
           <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
-              <span className="label-text">Average Cost</span>
+              <span className="label-text dark:text-white">Average Cost</span>
             </label>
             <label className="input-group">
               <input
@@ -143,7 +145,7 @@ const AddSpot = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Seasonality</span>
+              <span className="label-text dark:text-white">Seasonality</span>
             </label>
             <label className="input-group">
               <input
@@ -157,7 +159,7 @@ const AddSpot = () => {
           </div>
           <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
-              <span className="label-text">Travel Time</span>
+              <span className="label-text dark:text-white">Travel Time</span>
             </label>
             <label className="input-group">
               <input
@@ -173,7 +175,7 @@ const AddSpot = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Total Visitors Per Year</span>
+              <span className="label-text dark:text-white">Total Visitors Per Year</span>
             </label>
             <label className="input-group">
               <input
@@ -187,7 +189,7 @@ const AddSpot = () => {
           </div>
           <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
-              <span className="label-text">User Email</span>
+              <span className="label-text dark:text-white">User Email</span>
             </label>
             <label className="input-group">
               <input
@@ -203,7 +205,7 @@ const AddSpot = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">User Name</span>
+              <span className="label-text dark:text-white">User Name</span>
             </label>
             <label className="input-group">
               <input

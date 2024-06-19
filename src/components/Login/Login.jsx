@@ -57,15 +57,17 @@ const Login = () => {
       <Helmet>
         <title>Tourism Management / Login</title>
       </Helmet>
-      <div className="hero-content flex-col ">
+      <div className="hero-content flex-col dark:bg-[#18181B] dark:text-white ">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login your account !</h1>
+          <h1 className="text-5xl font-bold dark:text-white">
+            Login your account !
+          </h1>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 dark:bg-[#18181B] dark:text-white">
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text dark:text-white">Email</span>
               </label>
               <input
                 type="email"
@@ -77,7 +79,7 @@ const Login = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text dark:text-white">Password</span>
               </label>
               <input
                 type="password"
@@ -87,7 +89,10 @@ const Login = () => {
                 required
               />
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <a
+                  href="#"
+                  className="label-text-alt link link-hover dark:text-white"
+                >
                   Forgot password?
                 </a>
               </label>

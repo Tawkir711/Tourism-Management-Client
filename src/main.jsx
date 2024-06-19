@@ -1,20 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Context from './components/Context/Context.jsx';
-import Main from './components/Layout/Main.jsx';
-import Home from './components/Home/Home.jsx';
-import Register from './components/Register/Register.jsx';
-import Login from './components/Login/Login.jsx';
-import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
-import AddSpot from './components/AddSpot/AddSpot.jsx';
-import UpdateSpot from './components/UpdateSpot/UpdateSpot.jsx';
-import SpotDetails from './components/Spot/SpotDetails.jsx';
-import PrivateRoute from './components/privateRoute/PrivateRoute.jsx';
-import MyList from './components/MyList/MyList.jsx';
-import AllTouristSpot from './components/AllTouristSpot/AllTouristSpot.jsx';
+import Context from "./components/Context/Context.jsx";
+import Main from "./components/Layout/Main.jsx";
+import Home from "./components/Home/Home.jsx";
+import Register from "./components/Register/Register.jsx";
+import Login from "./components/Login/Login.jsx";
+import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
+import AddSpot from "./components/AddSpot/AddSpot.jsx";
+import UpdateSpot from "./components/UpdateSpot/UpdateSpot.jsx";
+import SpotDetails from "./components/Spot/SpotDetails.jsx";
+import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
+import MyList from "./components/MyList/MyList.jsx";
+import AllTouristSpot from "./components/AllTouristSpot/AllTouristSpot.jsx";
+import ThemeProvider from "./components/ThemeContext/ThemeContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: "/updateSpot/:id",
         element: <UpdateSpot></UpdateSpot>,
-        loader: ({params}) =>
+        loader: ({ params }) =>
           fetch(`http://localhost:5000/myLists/${params.id}`),
       },
       {
@@ -69,17 +70,19 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/spot/${params.id}`),
       },
       {
-        path: '/allTourSpot',
-        element: <AllTouristSpot></AllTouristSpot>
-      }
+        path: "/allTourSpot",
+        element: <AllTouristSpot></AllTouristSpot>,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Context>
-       <RouterProvider router={router} />
-    </Context>
+    <ThemeProvider>
+      <Context>
+        <RouterProvider router={router} />
+      </Context>
+    </ThemeProvider>
   </React.StrictMode>
 );
