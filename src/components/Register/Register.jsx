@@ -6,12 +6,12 @@ import { Helmet } from "react-helmet";
 import { AuthContext } from "../Context/Context";
 
 const Register = () => {
-  const { createUser, signInGoogle } = useContext(AuthContext);
+  const { createUser, signInGoogle, updateProfile, user } = useContext(AuthContext);
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
@@ -33,21 +33,25 @@ const Register = () => {
       return;
     }
 
-    createUser(email, password)
-      .then(() => {
-        Swal.fire({
-          icon: "success",
-          title: "Your Register Successfully",
-        });
-        navigate(location?.state ? location.state : "/login");
-      })
-      .catch((error) => {
-        Swal.fire({
-          icon: "error",
-          title: "Oops Try Again",
-          text: error.message,
-        });
+    try {
+      const userCredential = await createUser(email, password);
+      const user = userCredential.user;
+      await updateProfile(user, {
+        displayName: name,
+        photoURL: photo,
       });
+      Swal.fire({
+        icon: "success",
+        title: "Your Register Successfully",
+      });
+      navigate(location?.state ? location.state : "/login");
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops Try Again",
+        text: error.message,
+      });
+    }
   };
 
   const handleGoogle = () => {

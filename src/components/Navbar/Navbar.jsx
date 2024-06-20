@@ -61,7 +61,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className={`navbar bg-gray-300 `}>
+    <div className={`navbar bg-gray-300 sticky top-0 z-10`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -109,7 +109,8 @@ const Navbar = () => {
           <button
             onClick={toggleTheme}
             className="p-2 rounded bg-blue-500 text-white dark:bg-yellow-500 "
-          >Toggle
+          >
+            Toggle
           </button>
         </div>
       </div>
