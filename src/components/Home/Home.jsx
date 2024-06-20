@@ -4,6 +4,7 @@ import PopularTour from "../PopularTour/PopularTour";
 import Banner from "./Banner";
 import SpotCard from "../Spot/SpotCard";
 import { useLoaderData } from "react-router-dom";
+import AboutUs from "../AboutUs/AboutUs";
 
 const Home = () => {
   const spots = useLoaderData();
@@ -21,6 +22,7 @@ const Home = () => {
         ))}
       </div>
       <PopularTour></PopularTour>
+      <AboutUs></AboutUs>
     </>
   );
 };
